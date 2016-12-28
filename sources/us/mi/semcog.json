@@ -9,7 +9,11 @@
     "conform": {
         "number": "LOADD1",
         "street": "STREET1",
-        "unit": "STREET2",
+        "unit": {
+            "function": "regexp",
+            "field": "STREET1",
+            "pattern": "(\\b(?:UNIT|APT|SUITE|BLDG|LOT|#)\\b.+)$"
+        },
         "postcode": "ZIPCODE",
         "type": "geojson"
     }
