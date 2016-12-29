@@ -12,7 +12,8 @@
         "unit": {
             "function": "regexp",
             "field": "STREET1",
-            "pattern": "(\\b(?:UNIT|APT|SUITE|BLDG|LOT|#)\\b.+)$"
+            "pattern": "(\\b(?:UNIT|APT|SUITE|BLDG|LOT|#)\\b.+)$",
+            "replace": "$1"
         },
         "postcode": "ZIPCODE",
         "type": "geojson"
