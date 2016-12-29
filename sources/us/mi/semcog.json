@@ -8,7 +8,12 @@
     "type": "ESRI",
     "conform": {
         "number": "LOADD1",
-        "street": "STREET1",
+        "street": {
+            "function": "regexp",
+            "field": "STREET1",
+            "pattern": "^(.+)(?:\\b(?:UNIT|APT|SUITE|BLDG|LOT|#).*\\b)?$",
+            "replace": "$1"
+        },
         "unit": {
             "function": "regexp",
             "field": "STREET1",
